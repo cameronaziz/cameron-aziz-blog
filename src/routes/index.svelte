@@ -16,12 +16,12 @@
 </script>
 
 <svelte:head>
-	<title>Stunning Theme</title>
+	<title>Cameron Aziz - Blog</title>
 </svelte:head>
 
 <div class="hero-section">
-	<h1>Stunning Sapper Blog theme with support for markdown files</h1>
-	<p>Start Publishing With Sapper</p>
+	<h1>Hi. I'm Cameron Aziz</h1>
+	<p>Let me talk.</p>
 </div>
 
 <Posts {posts} limit={postsPerPage} />

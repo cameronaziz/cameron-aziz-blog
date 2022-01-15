@@ -7,7 +7,7 @@ export async function get(req, res, next) {
   if (posts !== null) {
     const response = {
       postsPerPage: source.postsPerPage,
-      posts,
+      posts
     };
 
     res.setHeader('Content-Type', 'application/json');

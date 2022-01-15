@@ -1104,6 +1104,13 @@ form-data@~2.3.2:
     combined-stream "^1.0.6"
     mime-types "^2.1.12"
 
+front-matter@^3.1.0:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/front-matter/-/front-matter-3.2.1.tgz#88be839638f397bbbcb0d61ac03bd08abb4f0a40"
+  integrity sha512-YUhgEhbL6tG+Ok3vTGIoSDKqcr47aSDvyhEqIv8B+YuBJFsPnOiArNXTPp2yO07NL+a0L4+2jXlKlKqyVcsRRA==
+  dependencies:
+    js-yaml "^3.13.1"
+
 fs-minipass@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/fs-minipass/-/fs-minipass-2.1.0.tgz#7f5036fdbf12c63c169190cbe4199c852271f9fb"
@@ -1636,6 +1643,11 @@ map-obj@^4.0.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-4.3.0.tgz#9304f906e93faae70880da102a9f1df0ea8bb05a"
   integrity sha512-hdN1wVrZbb29eBGiGjJbeP8JbKjq1urkHJ/LIP/NY48MZ1QVXUsQBV1G1zvYFHn1XE06cwjBsOI2K3Ulnj1YXQ==
+
+marked@^0.8.0:
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.8.2.tgz#4faad28d26ede351a7a1aaa5fec67915c869e355"
+  integrity sha512-EGwzEeCcLniFX51DhTpmTom+dSA/MG/OBUDjnWtHbEnjAH180VzUeAw+oE4+Zv+CoYBWyRlYOTR0N8SO9R1PVw==
 
 meow@^9.0.0:
   version "9.0.0"
@@ -2271,6 +2283,15 @@ sander@^0.5.0:
     mkdirp "^0.5.1"
     rimraf "^2.5.2"
 
+sapper-sources@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/sapper-sources/-/sapper-sources-0.0.2.tgz#36a81201698e852a43a6ac2b3b5ce84f3858911a"
+  integrity sha512-VN3+x0lAFA10a0ZsbCiwm78JPWx/HFxulKZso3ChhJoy+jpfoGOwQcNd1Qi4QW9IRtyWEIDc6bLOPBs/6NxaDw==
+  dependencies:
+    front-matter "^3.1.0"
+    marked "^0.8.0"
+    uuidv5 "^1.0.0"
+
 sass-graph@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/sass-graph/-/sass-graph-4.0.0.tgz#fff8359efc77b31213056dfd251d05dadc74c613"
@@ -2705,6 +2726,11 @@ uuid@^3.3.2:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
+
+uuidv5@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/uuidv5/-/uuidv5-1.0.0.tgz#af98e9befcb462c0ab6c752edd082cb52fb530a0"
+  integrity sha1-r5jpvvy0YsCrbHUu3QgstS+1MKA=
 
 v8-compile-cache@^2.0.3:
   version "2.3.0"
