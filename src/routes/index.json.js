@@ -1,6 +1,7 @@
 import config from '../../theme.config.js';
 
 export async function get(req, res, next) {
+  console.log('index.json.js');
   const source = await config.source;
   const posts = source.contents;
 
