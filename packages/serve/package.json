@@ -1,0 +1,13 @@
+{
+  "name": "@cameron-aziz-blog/serve",
+  "version": "0.1.0",
+  "author": "Cameron Aziz",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "apollo-server": "^3.6.1",
+    "graphql": "^16.2.0"
+  }
+}

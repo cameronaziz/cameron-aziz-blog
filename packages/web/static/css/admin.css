@@ -1,0 +1,18 @@
+html,
+body {
+  color: #444;
+  font-size: 24px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+body {
+  padding: 0 60px 0 10px;
+}
+
+img {
+  display: none;
+}
+
+.frame-content:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+  display: none;
+}

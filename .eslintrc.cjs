@@ -9,7 +9,10 @@ module.exports = {
   ],
   ignorePatterns: ['*.cjs'],
   rules: {
-    semi: ['warning', 'always']
+    semi: [
+      'warn', 'always'
+    ],
+    'comma-dangle': ['warn', 'always-multiline']
   },
   overrides: [
     {
