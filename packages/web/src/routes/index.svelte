@@ -1,23 +1,37 @@
+<script context="module">
+	export async function load(req) {
+		const {
+			url: { origin },
+		} = req;
+		const res = await fetch(`${origin}/index.json`);
+		const json = await res.json();
+		console.log(json.data);
+
+		if (res.status !== 200) {
+			return {
+				props: {
+					error: json.error,
+				},
+			};
+		}
+
+		return {
+			props: {
+				posts: json.data,
+			},
+		};
+	}
+</script>
+
 <script lang="ts">
-	import { ApolloClient, InMemoryCache } from '@apollo/client';
-	import { query, setClient } from 'svelte-apollo';
 	import Breadcrumb from '../components/Breadcrumb.svelte';
 	import Hero from '../components/Hero.svelte';
 	import Posts from '../components/Posts.svelte';
-	import { GET_POSTS } from '../queries';
 	import type Blog from '../typings/blog';
-	import type GraphQL from '../typings/graphql';
 	import Layout from './_layout.svelte';
 
-	const client = new ApolloClient({
-		uri: 'http://localhost:4000/',
-		cache: new InMemoryCache()
-	});
-
-	setClient(client);
 	export let postsPerPage = 10;
-
-	const posts = query<GraphQL.Response<Blog.Post[], 'posts'>, void>(GET_POSTS);
+	export let posts: Blog.Post[];
 </script>
 
 <svelte:head>

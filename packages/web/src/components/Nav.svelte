@@ -3,7 +3,7 @@
 </script>
 
 <nav>
-	<a href="." class="logo">
+	<a href=".">
 		<span>Cameron Aziz</span>
 	</a>
 	<ul>
@@ -23,23 +23,21 @@
 
 <style lang="scss">
 	nav {
-		display: flex;
-		justify-content: space-between;
 		align-items: center;
+		background-color: #fff;
+		font-family: 'Archivo', sans-serif;
+		display: flex;
 		flex-wrap: wrap;
+		font-size: 1.2rem;
+		justify-content: space-between;
 		position: sticky;
 		top: 0;
-		background-color: #fff;
 		z-index: 1;
-	}
 
-	.logo {
-		font-size: 1.2rem;
 		span {
-			font-weight: bold;
+			font-size: 2.5rem;
 		}
 	}
-
 	ul {
 		margin: 0;
 		padding: 0;

@@ -1,19 +1,18 @@
-import config from '../../../theme.config';
-import formatter from '../../utils/formatter';
+import fs from 'fs';
+import {absolutePath} from '../../utils/paths';
 
-export async function get(req, res, next) {
+/** @type {import('@sveltejs/kit').RequestHandler} */
+export async function get(req) {
   const {slug} = req.params;
+  const file = absolutePath(`data/posts/${slug}.json`);
 
-  const source = await config.source;
-  const post = formatter(source.contents, source.postsPerPage).getPost(slug);
-
-  if (post) {
-    res.writeHead(200, {'Content-Type': 'application/json'});
-
-    res.end(JSON.stringify(post));
-  } else {
-    res.writeHead(404, {'Content-Type': 'application/json'});
-
-    res.end(JSON.stringify({message: `Not found`}),);
+  if (!fs.existsSync(file)) {
+    return {status: 404};
   }
+
+  const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+  console.log(data);
+  return {body: {
+      data
+    }};
 }

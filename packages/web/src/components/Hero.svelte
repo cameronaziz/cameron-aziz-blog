@@ -1,6 +1,6 @@
 <div class="hero-section">
-	<h1>Hi. I'm Cameron Aziz</h1>
-	<p>Let me talk.</p>
+	<h1>Hi, I'm Cameron.</h1>
+	<p>Let me talk. I talk a lot.</p>
 </div>
 
 <style lang="scss">

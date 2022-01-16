@@ -1,29 +1,20 @@
 <script lang="ts">
-	import type { ReadableQuery } from 'svelte-apollo';
 	import type Blog from '../typings/blog';
-	import type GraphQL from '../typings/graphql';
 
 	export let limit = -1;
-	export let posts: ReadableQuery<GraphQL.Response<Blog.Post[], 'posts'>>;
+	export let posts: Blog.Post[];
 </script>
 
 <div class="posts">
-	{#if $posts.loading}
-		Loading...
-	{:else if $posts.error}
-		Error: {$posts.error}
-	{:else}
-		{console.log($posts.data)}
-		{#each $posts.data.posts.slice(0, limit) as post}
-			<a class="post" href="/blog/{post.slug}">
-				{#if post.spotlightImage}
-					<img src={post.spotlightImage} alt="" />
-				{/if}
-				<h2>{post.title}</h2>
-				<div class="description">{post.body}</div>
-			</a>
-		{/each}
-	{/if}
+	{#each posts.slice(0, limit) as post}
+		<a class="post" href="/blog/{post.slug}">
+			{#if post['spotlight-image']}
+				<img src={post['spotlight-image']} alt="" />
+			{/if}
+			<h2>{post.title}</h2>
+			<div class="description">{post.body}</div>
+		</a>
+	{/each}
 </div>
 
 <style lang="scss">

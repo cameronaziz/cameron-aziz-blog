@@ -2,25 +2,25 @@ module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
   extends: [
-    'eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'
+    'eslint:recommended', 'plugin:@typescript-eslint/recommended',
   ],
   plugins: [
-    'svelte3', '@typescript-eslint'
+    'svelte3', '@typescript-eslint',
   ],
-  ignorePatterns: ['*.cjs'],
   rules: {
     semi: [
-      'warn', 'always'
+      'warn', 'always',
     ],
-    'comma-dangle': ['warn', 'always-multiline']
+    'comma-dangle': [
+      'warn', 'always-multiline',
+    ],
+    'no-comma-dangle': ['off'],
+    '@typescript-eslint/comma-dangle': 'off'
   },
   overrides: [
     {
-      files: ['*.svelte'],
-      processor: 'svelte3/svelte3'
-    }, { // enable the rule specifically for TypeScript files
       files: [
-        '*.js', '*.jsx'
+        '*.js', '*.jsx',
       ],
       rules: {
         '@typescript-eslint/explicit-module-boundary-types': ['off']

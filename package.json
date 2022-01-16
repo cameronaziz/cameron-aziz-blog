@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git@personal-github.com:cameronaziz/cameron-aziz-blog.git"
   },
+  "scripts": {
+    "dev": "yarn workspace @cameron-aziz-blog/web svelte-kit dev"
+  },
   "author": "Cameron Aziz",
   "license": "MIT",
   "workspaces": [

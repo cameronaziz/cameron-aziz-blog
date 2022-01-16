@@ -1,19 +1,15 @@
-import config from '../../theme.config.js';
+import fs from 'fs';
+import { absolutePath } from '../utils/paths';
 
-export async function get(req, res, next) {
-  console.log('index.json.js');
-  const source = await config.source;
-  const posts = source.contents;
+export async function get() {
+  const files = fs.readdirSync(absolutePath('data/posts'));
 
-  if (posts !== null) {
-    const response = {
-      postsPerPage: source.postsPerPage,
-      posts
-    };
-
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(response));
-  } else {
-    next();
-  }
+  const data = files.map((file) => {
+    const filePath = absolutePath(`data/posts/${file}`);
+    const fileData = fs.readFileSync(filePath, 'utf8');
+    return JSON.parse(fileData);
+  });
+  return {body: {
+      data,
+    }};
 }

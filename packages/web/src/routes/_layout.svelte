@@ -1,6 +1,15 @@
-<script>
+<script lang="ts">
+	import { ApolloClient, InMemoryCache } from '@apollo/client';
+	import { setClient } from 'svelte-apollo';
 	import Footer from '../components/Footer.svelte';
 	import Nav from '../components/Nav.svelte';
+
+	const client = new ApolloClient({
+		uri: 'http://localhost:4000/',
+		cache: new InMemoryCache(),
+	});
+
+	setClient(client);
 
 	export let segment;
 </script>
