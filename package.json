@@ -30,13 +30,11 @@
   },
   "type": "module",
   "dependencies": {
-    "@apollo/client": "^3.5.7",
     "@rollup/plugin-json": "^4.1.0",
     "netlify-cms-app": "^2.15.63",
     "node-sass": "^7.0.1",
     "reading-time": "^1.5.0",
     "sapper-sources": "^0.0.2",
-    "sass": "^1.48.0",
-    "svelte-apollo": "^0.4.0"
+    "sass": "^1.48.0"
   }
 }
