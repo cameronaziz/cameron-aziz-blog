@@ -1,5 +1,5 @@
 import fs from 'fs';
-import {absolutePath} from '../../utils/paths';
+import { absolutePath } from '../../utils/paths';
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function get(req) {
@@ -11,8 +11,7 @@ export async function get(req) {
   }
 
   const data = JSON.parse(fs.readFileSync(file, 'utf8'));
-  console.log(data);
   return {body: {
-      data
+      data,
     }};
 }

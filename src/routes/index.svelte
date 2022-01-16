@@ -5,7 +5,6 @@
 		} = req;
 		const res = await fetch(`${origin}/index.json`);
 		const json = await res.json();
-		console.log(json.data);
 
 		if (res.status !== 200) {
 			return {
