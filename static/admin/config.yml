@@ -38,7 +38,7 @@ collections:
         widget: "markdown"
   - name: "images"
     label: "Image"
-    folder: "../../data/images"
+    folder: "data/images"
     create: true
     format: json
     fields:
